@@ -1,6 +1,6 @@
 FROM ovation/humaniq-mvn
-WORKDIR /tmp/01
-ADD . /tmp/01
-RUN ./aws-device-farm-appium-tests-for-sample-app/build.sh
+WORKDIR /tmp/01/aws-device-farm-appium-tests-for-sample-app
+ADD . /tmp/01/aws-device-farm-appium-tests-for-sample-app
+RUN . /build.sh
 
 CMD ["cat", "target/zip-with-dependencies.zip"]
